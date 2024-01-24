@@ -3,8 +3,9 @@ import random
 number = random.randint(-10000, 10000)
 sign = 1
 if number < 0:
-	sign = (-1)
-lastdigit = (sign * number % 10)
+	lastdigit = number % -10
+else:
+    lastdigit = number % 10
 if lastdigit > 5:
     print(f"Last digit of {number} is {lastdigit} and is greater than 5")
 elif lastdigit == 0:
