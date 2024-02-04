@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+    This is the Square class with private size attribute,
+    getter, setter, and area method.
+    """
 
 
 class Square:
