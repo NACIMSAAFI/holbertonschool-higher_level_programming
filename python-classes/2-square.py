@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+    This is the Square class with a private size attribute.
+
+    Parameters:
+        - size (int, optional): The size of the square (default is 0).
+    """
 
 
 class Square:
