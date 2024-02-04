@@ -1,48 +1,73 @@
 """
 Description: Test add_integer function
 >>> add_integer = __import__('0-add_integer').add_integer
+
+Accept 2 integers
+
 >>> add_integer(2, 3)
 5
+
+Accept negative integer
 
 >>> add_integer(-2, 3)
 1
 
+Accept float and integer
+
 >>> add_integer(2.5, 3)
 5
+
+Accept integer and float
 
 >>> add_integer(3, 5.5)
 8
 
+Accept two floats
+
 >>> add_integer(3.5, 5.5)
 8
+
+Raise exception with quotation mark
 
 >>> add_integer("2", 3)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
+Raise exception with quotation mark
+
 >>> add_integer(2, "3")
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
+
+Raise exception if arguments more than two
 
 >>> add_integer(1, 2, 3)
 Traceback (most recent call last):
     ...
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
->>> add_integer("-2","3")
+Raise exception with quotation mark
+
+>>> add_integer("-2", "3")
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
+Raise exception with empty argument
+
 >>> add_integer()
 Traceback (most recent call last):
-    ....
+    ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Accept two negative integers
 
 >>> add_integer(-2, -2)
 -4
+
+Accept negative integer and float
 
 >>> add_integer(-2, 4.545)
 2
@@ -55,7 +80,7 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 
 >>> add_integer(float('inf'))
 Traceback (most recent call last):
-OverflowError: cannot convert float infinity to integer
+    OverflowError: cannot convert float infinity to an integer
 
 >>> add_integer(None)
 Traceback (most recent call last):
@@ -72,5 +97,4 @@ TypeError: a must be an integer
 
 >>> add_integer(True, 33)
 34
-
 """
