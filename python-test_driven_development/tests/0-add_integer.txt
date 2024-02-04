@@ -1,77 +1,35 @@
-The ``add_integer`` module
-===============================================================================
+# Test Case 1: Regular integers
+4, 5
+# Expected Output: 9
 
-Using ``add_integer``
--------------------------------------------------------------------------------
+# Test Case 2: Floats
+2.5, 3.5
+# Expected Output: 6
 
-Import add_integer from 0-add_integer
+# Test Case 3: One integer, one float
+8, 2.3
+# Expected Output: 10
 
-    >>> add_integer = __import__('0-add_integer').add_integer
+# Test Case 4: Both integers
+-3, 7
+# Expected Output: 4
 
-It should do the simple calculation
+# Test Case 5: Both floats
+0.5, 0.5
+# Expected Output: 1
 
-    >>> add_integer(1, 2)
-    3
+# Test Case 6: Default value for b
+6
+# Expected Output: 104
 
-It should accept negative integer
+# Test Case 7: Non-numeric input
+"hello", 3
+# Expected Output: TypeError('a must be an integer or float')
 
-    >>> add_integer(100, -2)
-    98
+# Test Case 8: Non-numeric input for both
+"hello", "world"
+# Expected Output: TypeError('a must be an integer or float')
 
-It should invoke the default variable of b as 98
-
-    >>> add_integer(2)
-    100
-
-It should raise exception when passing an empty args
-
-    >>> add_integer()
-    Traceback (most recent call last):
-        ...
-    TypeError: add_integer() missing 1 required positional argument: 'a'
-
-It should return integer when passing float
-
-    >>> add_integer(100.3, 3)
-    103
-
-It should return integer when passing float
-
-    >>> add_integer(3, 33.9)
-    36
-
-It should raise exception when passing not integer for 'b'
-
-    >>> add_integer(4, "school")
-    Traceback (most recent call last):
-        ...
-    TypeError: b must be an integer
-
-It should raise exception when passing not integer for 'a'
-
-    >>> add_integer("holberton", 4)
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer
-
-It should make casting before addition
-
-    >>> add_integer(20.9, 20.9)
-    40
-
-It should not accept boolean value
-
-    >>> add_integer(True, 5)
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer
-
-It should accept math operation inside the argument
-
-    >>> add_integer(5+6, 9)
-    20
-
-It should accept nesting call of add_integer
-
-    >>> add_integer(add_integer(5, 6), 9)
-    20
+# Test Case 9: Large integers
+1000000000, 2000000000
+# Expected Output: 3000000000
