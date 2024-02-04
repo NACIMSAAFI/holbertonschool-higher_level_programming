@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-    This is the Square class with private size attribute,
-    getter, setter, area method and my_print method..
-    """
+This is the Square class with private size attribute,
+getter, setter, area method, and my_print method.
+"""
 
 
 class Square:
     """
     This is the Square class with private size attribute,
-    getter, setter, area method and my_print method..
+    getter, setter, area method, and my_print method.
     """
 
     def __init__(self, size=0):
@@ -62,7 +62,10 @@ class Square:
         """
         Prints the square using the '#' character.
         """
-        for i in range(self.__size):
-            for j in range(self.__size):
-                print("#", end="")
+        if self.__size == 0:
             print()
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                print()
