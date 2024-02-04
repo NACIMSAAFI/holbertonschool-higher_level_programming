@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This script defines a function 'say_my_name' that prints
+the provided first name and last name.
+If no last name is provided, it prints only the first name.
+"""
+
 
 def say_my_name(first_name, last_name=""):
     """
@@ -12,6 +18,9 @@ def say_my_name(first_name, last_name=""):
     Raises:
     - TypeError: If first_name is not a string or if last_name (when provided)
       is not a string.
+
+    Returns:
+    - None
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
