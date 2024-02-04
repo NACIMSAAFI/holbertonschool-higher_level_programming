@@ -73,5 +73,3 @@ TypeError: a must be an integer
 
 >>> add_integer(True, 33)
 34
-
-"""
