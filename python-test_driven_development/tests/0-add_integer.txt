@@ -46,7 +46,7 @@ Raise exception if arguments more than two
 >>> add_integer(1, 2, 3)
 Traceback (most recent call last):
     ...
-TypeError: add_integer() takes from 1 to 2 arguments but 3 were given
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 Raise exception with quotation mark
 
