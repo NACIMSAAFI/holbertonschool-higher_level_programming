@@ -1,7 +1,6 @@
 """
 Description: Test add_integer function
 >>> add_integer = __import__('0-add_integer').add_integer
-
 >>> add_integer(2, 3)
 5
 
@@ -73,3 +72,5 @@ TypeError: a must be an integer
 
 >>> add_integer(True, 33)
 34
+
+"""
