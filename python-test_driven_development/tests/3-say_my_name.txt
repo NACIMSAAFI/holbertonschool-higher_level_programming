@@ -16,7 +16,7 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 
 >>> say_my_name("Ahmed")
-My name is Ahmed
+My name is Ahmed 
 
 >>> say_my_name("Ahmed", "Ali")
 My name is Ahmed Ali
