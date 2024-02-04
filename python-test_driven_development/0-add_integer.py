@@ -26,3 +26,4 @@ def add_integer(a, b=98):
     if (a + b) == float('inf') or (a + b) == -float('inf'):
         return b
     return int(a) + int(b)
+    
