@@ -1,78 +1,77 @@
 """
-Import add_integer from 0-add_integer
-
+Description: Test add_integer function
 >>> add_integer = __import__('0-add_integer').add_integer
 
-Simple calculation
+>>> add_integer(2, 3)
+5
 
->>> add_integer(1, 2)
-3
+>>> add_integer(-2, 3)
+1
 
-Accept negative integer
+>>> add_integer(2.5, 3)
+5
 
->>> add_integer(100, -2)
-98
+>>> add_integer(3, 5.5)
+8
 
-Invoke the default variable of b as 98
+>>> add_integer(3.5, 5.5)
+8
 
->>> add_integer(2)
-100
-
-Raise exception when passing an empty args
-
->>> add_integer()
-Traceback (most recent call last):
-    ...
-TypeError: add_integer() missing 1 required positional argument: 'a'
-
-Return integer when passing float
-
->>> add_integer(100.3, 3)
-103
-
-Return integer when passing float
-
->>> add_integer(3, 33.9)
-36
-
-Raise exception when passing not integer for 'b'
-
->>> add_integer(4, "school")
-Traceback (most recent call last):
-    ...
-TypeError: b must be an integer
-
-Raise exception when passing not integer for 'a'
-
->>> add_integer("holberton", 4)
+>>> add_integer("2", 3)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-Make casting before addition
+>>> add_integer(2, "3")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
 
->>> add_integer(20.9, 20.9)
-40
+>>> add_integer(1, 2, 3)
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
-Accept boolean value
+>>> add_integer("-2","3")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 
->>> add_integer(True, 5)
-6
+>>> add_integer()
+Traceback (most recent call last):
+    ....
+TypeError: add_integer() missing 1 required positional argument: 'a'
 
-Accept math operation inside the argument
+>>> add_integer(-2, -2)
+-4
 
->>> add_integer(5+6, 9)
-20
+>>> add_integer(-2, 4.545)
+2
 
-Accept given a and b integers
+>>> add_integer(4.545)
+102
+
+>>> add_integer(-2)
+96
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(245545, 4477878778)
+4478124323
 
 >>> a = 10
 >>> b = -5
 >>> add_integer(a, b)
 5
 
-Accept nesting call of add_integer
+>>> add_integer(True, 33)
+34
 
->>> add_integer(add_integer(5, 6), 9)
-20
 """
