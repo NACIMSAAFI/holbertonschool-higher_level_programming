@@ -1,44 +1,44 @@
 """
 Description: Test add_integer function
-# add_integer = __import__('0-add_integer').add_integer
+ add_integer = __import__('0-add_integer').add_integer
 
-# Test Case 1: Regular integers
+ Test Case 1: Regular integers
 >>> add_integer(4, 5)
 9
 
-# Test Case 2: Floats
+ Test Case 2: Floats
 >>> add_integer(2.5, 3.5)
 6
 
-# Test Case 3: One integer, one float
+ Test Case 3: One integer, one float
 >>> add_integer(8, 2.3)
 10
 
-# Test Case 4: Both integers
+ Test Case 4: Both integers
 >>> add_integer(-3, 7)
 4
 
-# Test Case 5: Both floats
+ Test Case 5: Both floats
 >>> add_integer(0.5, 0.5)
 1
 
-# Test Case 6: Default value for b
+ Test Case 6: Default value for b
 >>> add_integer(6)
 104
 
-# Test Case 7: Non-numeric input
+ Test Case 7: Non-numeric input
 >>> add_integer("hello", 3)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer or float
 
-# Test Case 8: Non-numeric input for both
+ Test Case 8: Non-numeric input for both
 >>> add_integer("hello", "world")
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer or float
 
-# Test Case 9: Large integers
+ Test Case 9: Large integers
 >>> add_integer(1000000000, 2000000000)
 3000000000
 """
