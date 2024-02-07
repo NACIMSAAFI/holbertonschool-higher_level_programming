@@ -1,6 +1,30 @@
 #!/usr/bin/python3
+
+"""
+This script defines a Rectangle class with methods to calculate its area and
+perimeter, and enforces the width and height attributes to be positive.
+"""
+
+
 class Rectangle:
+
+    """
+    Constructor for the Rectangle class, initializing a rectangle with the
+    given width and height values. Defaults to zero if no values are provided.
+    """
+
     def __init__(self, width=0, height=0):
+        """
+        Initializes a Rectangle object with the specified width and height.
+
+        Args:
+            width (int): The width of the rectangle (default is 0).
+            height (int): The height of the rectangle (default is 0).
+
+        Raises:
+            TypeError: If width or height is not an integer.
+            ValueError: If width or height is less than 0.
+        """
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -13,8 +37,22 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.height = height
 
+    """
+    Method to calculate the area of the rectangle.
+
+    Returns:
+        int: The area of the rectangle.
+    """
+
     def area(self):
         return self.width * self.height
+
+    """
+    Method to calculate the perimeter of the rectangle.
+
+    Returns:
+        int: The perimeter of the rectangle.
+    """
 
     def perimeter(self):
         if self.width == 0 or self.height == 0:
