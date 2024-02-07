@@ -6,7 +6,7 @@ Class represents a emty rectangle.
 
 class Rectangle:
     """
-    Empty rectangle.
+    Empty rectangle class.
     """
 
     pass
