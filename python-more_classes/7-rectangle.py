@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+
+"""
+This script defines a Rectangle class with methods to calculate its area and
+perimeter, and enforces the width and height attributes to be positive int.
+"""
+
+
 class Rectangle:
     """
     Class representing a rectangle.
