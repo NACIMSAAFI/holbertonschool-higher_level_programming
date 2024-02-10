@@ -1,0 +1,15 @@
+# Test Case 1
+Create an instance of MyList with unsorted elements
+Expected Output: [3, 1, 2]
+
+# Test Case 2
+Call the print_sorted() method on the MyList instance
+Expected Output: [1, 2, 3]
+
+# Test Case 3
+Add new elements to the MyList instance
+Expected Output: [3, 1, 2, 4, 6, 5]
+
+# Test Case 4
+Call the print_sorted() method again
+Expected Output: [1, 2, 3, 4, 5, 6]
