@@ -1,0 +1,55 @@
+-------------------------------------------
+case 0: Import
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>>
+-------------------------------------------
+
+case 1: Test area() method
+Description: Test if the area() method raises NotImplementedError as expected.
+
+Input:
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.area()
+
+Expected Output:
+>>> NotImplementedError should be raised
+
+-------------------------------------------
+
+case 2: Test integer_validator() method with valid input
+Description: Test if integer_validator() method accepts valid input.
+
+Input:
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.integer_validator("side_length", 5)
+
+Expected Output:
+>>> No exception should be raised
+
+-------------------------------------------
+
+case 3: Test integer_validator() method with invalid input (non-integer)
+Description: Test if integer_validator() method raises TypeError for non-integer input.
+
+Input:
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.integer_validator("side_length", "10")
+
+Expected Output:
+>>> TypeError should be raised with a message indicating that "side_length" must be an integer
+
+-------------------------------------------
+
+case 4: Test integer_validator() method with invalid input (negative value)
+Description: Test if integer_validator() method raises ValueError for negative input.
+
+Input:
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.integer_validator("side_length", -5)
+
+Expected Output:
+>>> ValueError should be raised with a message indicating that "side_length" must be greater than 0
+
+-------------------------------------------
+
+case 5: Test additional cases...
