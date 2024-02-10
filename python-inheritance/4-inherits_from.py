@@ -21,10 +21,4 @@ def inherits_from(obj, a_class):
         of a class that inherited from the specified class;
         otherwise False.
     """
-    if type(obj) == a_class:
-        return False
-
-    for cls in type(obj).__mro__:
-        if cls == a_class:
-            return True
-    return False
+    return issubclass(type(obj), a_class) and type(obj) != a_class
