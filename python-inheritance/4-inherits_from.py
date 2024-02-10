@@ -8,17 +8,23 @@ from the specified class ; otherwise False.
 
 def inherits_from(obj, a_class):
     """
-    Checks if the given object is an instance of a subclass
-    of the specified class.
+    Checks if the given object is an instance
+    of a class that inherited (directly or indirectly)
+    from the specified class.
 
     Parameters:
         obj: The object to check.
         a_class: The class to compare against.
 
     Returns:
-        True if the object is an instance of a subclass
-        of the specified class; otherwise False.
+        True if the object is an instance
+        of a class that inherited from the specified class;
+        otherwise False.
     """
+    if type(obj) == a_class:
+        return False
 
-    
-    return isinstance(obj, a_class) and type(obj) != a_class
+    for cls in type(obj).__mro__:
+        if cls == a_class:
+            return True
+    return False
