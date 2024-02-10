@@ -2,6 +2,7 @@
 """Inheerit from module"""
 
 
+
 def inherits_from(obj, a_class):
     """
     Checks if the given object is an instance
