@@ -11,8 +11,6 @@ class Square(Rectangle):
     """
     A class representing a square, inheriting from Rectangle.
 
-    Attributes:
-        __size (int): The size of the square.
     """
 
     def __init__(self, size):
