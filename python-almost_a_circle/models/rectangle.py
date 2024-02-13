@@ -26,23 +26,20 @@ class Rectangle(Base):
             y (int, optional): The y-coordinate of the rectangle's position.
             id (int, optional): The ID of the rectangle.
         """
-
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
         """Getter for the width attribute"""
-
         return self.__width
 
     @width.setter
     def width(self, value):
         """Setter for the width attribute"""
-
         self.__width = value
 
     @property
@@ -53,20 +50,17 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setter for the height attribute"""
-
         self.__height = value
 
     @property
     def x(self):
         """Getter for the x attribute"""
-
         return self.__x
 
     @x.setter
     def x(self, value):
         """Setter for the x attribute"""
-
-        self__x = value
+        self.__x = value
 
     @property
     def y(self):
