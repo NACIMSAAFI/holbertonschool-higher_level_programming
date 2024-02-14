@@ -112,13 +112,14 @@ class Rectangle(Base):
             self.id, self.__x, self.__y, self.__width, self.__height
         )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Updates the Rectangle attributes based on the arguments provided.
 
         Args:
             *args (tuple): Arbitrary arguments in the order id,
             width, height, x, y.
+            **kwargs (dict): Arbitrary keyword arguments.
         """
         if args:
             if len(args) >= 1:
@@ -131,3 +132,9 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
+        else:
+            self.id = kwargs.get('id', self.id)
+            self.width = kwargs.get('width', self.width)
+            self.height = kwargs.get('height', self.height)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)
