@@ -29,4 +29,6 @@ class Base:
         """Converts a list of dictionaries to a JSON-formatted string."""
         import json
 
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return []
         return json.dumps(list_dictionaries)
