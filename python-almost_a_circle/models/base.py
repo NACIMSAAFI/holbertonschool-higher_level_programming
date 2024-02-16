@@ -7,6 +7,8 @@ class Base:
     Represents a base class with a private class attribute __nb_objects
     and an instance attribute id.
     """
+    import json
+
 
     __nb_objects = 0
 
