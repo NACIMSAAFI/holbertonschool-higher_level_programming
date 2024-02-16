@@ -23,3 +23,9 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """Converts a list of dictionaries to a JSON-formatted string."""
+        import json
+
+        return json.dumps(list_dictionaries)
