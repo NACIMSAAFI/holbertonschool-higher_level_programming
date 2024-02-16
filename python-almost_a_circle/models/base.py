@@ -35,6 +35,7 @@ class Base:
         Returns:
             str: JSON-formatted string representation of list_dictionaries.
         """
-        import json
-
-        return json.dumps(list_dictionaries)
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        else:
+            return Base.json.dumps(list_dictionaries)
