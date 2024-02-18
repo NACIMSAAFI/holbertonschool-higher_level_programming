@@ -349,5 +349,6 @@ class TestBase_load_from_file(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base.load_from_file([], 1)
 
+
 if __name__ == "__main__":
     unittest.main()
