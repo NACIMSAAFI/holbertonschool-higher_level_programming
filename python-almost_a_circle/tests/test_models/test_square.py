@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""
+Defines unittests for square.py.
+"""
+
 import unittest
 from models.square import Square
 import io
