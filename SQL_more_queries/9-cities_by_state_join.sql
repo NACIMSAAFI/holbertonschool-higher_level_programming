@@ -1,5 +1,3 @@
 -- Lists all cities contained in the database hbtn_0d_usa.
-SELECT c.id, c.name AS city_name, s.name AS state_name
-FROM cities c
-JOIN states s ON c.state_id = s.id;
-ORDER BY cities.id;
+SELECT cities.id, cities.name, states.name FROM cities
+INNER JOIN states ON cities.state_id = states.id;
