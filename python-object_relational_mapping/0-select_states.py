@@ -9,7 +9,7 @@ db = MySQLdb.connect(
 )
 cursor = db.cursor()
 cursor.execute("SELECT * FROM states ORDER BY id ASC")
-for row in cursor.fetchall():
-    print(row)
+for state in cursor.fetchall():
+    print(state)
 cursor.close()
 db.close()
