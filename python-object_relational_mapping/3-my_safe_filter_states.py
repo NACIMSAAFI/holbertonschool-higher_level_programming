@@ -6,6 +6,9 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
+    if len(argv) != 5:
+        print("Usage: {} <username> <password> <database> <state_name>".format(argv[0]))
+        exit(1)
     state_name_searched = argv[4]
     db = MySQLdb.connect(
         host="localhost",
