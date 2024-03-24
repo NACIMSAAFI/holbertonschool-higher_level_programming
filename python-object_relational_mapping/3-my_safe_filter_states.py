@@ -9,16 +9,19 @@ if __name__ == "__main__":
     if len(argv) != 5:
         print("Usage: {} <username> <password>".format(argv[0]))
         print("       <database> <state_name>")
-
         exit(1)
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
     state_name_searched = argv[4]
+
     db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=argv[1],
-        db=argv[3],
-        charset="utf8"
-    )
+            host="localhost",
+            port=3306,
+            user=username,
+            db=database,
+            charset="utf8"
+        )
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE BINARY\
     '{}' ORDER BY id ASC".format(state_name_searched,))
