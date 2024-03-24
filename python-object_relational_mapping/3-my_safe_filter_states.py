@@ -5,7 +5,8 @@ in the states table of hbtn_0e_0_usa where name matches the argument."""
 import MySQLdb
 from sys import argv
 
-if __name__ == "__main__":
+
+def safe_find_state():
     if len(argv) != 5:
         print("Usage: {} <username> <password>".format(argv[0]))
         print("       <database> <state_name>")
@@ -29,3 +30,5 @@ if __name__ == "__main__":
         print(row)
     cursor.close()
     db.close()
+if __name__ == "__main__":
+    safe_find_state()
