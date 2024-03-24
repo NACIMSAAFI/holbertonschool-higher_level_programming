@@ -6,7 +6,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    state_name_searched = argv[4],
+    state_name_searched = argv[4]
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -16,7 +16,7 @@ if __name__ == "__main__":
     )
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE BINARY\
-    %s ORDER BY id ASC", (state_name_searched,))
+    '{}' ORDER BY id ASC".format(state_name_searched,))
     for row in cursor.fetchall():
         print(row)
     cursor.close()
