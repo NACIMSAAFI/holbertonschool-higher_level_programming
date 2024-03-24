@@ -7,7 +7,9 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) != 5:
-        print("Usage: {} <username> <password> <database> <state_name>".format(argv[0]))
+        print("Usage: {} <username> <password>".format(argv[0]))
+        print("       <database> <state_name>")
+
         exit(1)
     state_name_searched = argv[4]
     db = MySQLdb.connect(
