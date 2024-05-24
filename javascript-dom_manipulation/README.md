@@ -1,0 +1,1 @@
+README.md for JavaScript DOM manipulation project.
